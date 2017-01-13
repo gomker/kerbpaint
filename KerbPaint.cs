@@ -311,6 +311,7 @@ namespace KerbPaint
 
         public void OnMouseOver()
         {
+            if (HighLogic.LoadedScene == GameScenes.FLIGHT) return;
             if (Input.GetKeyUp(KeyCode.P))
             {
                 menuOpen = this;
@@ -322,11 +323,10 @@ namespace KerbPaint
 
         void drawGUI()
         {
-            if (currentlyPainting != this)
-                return;
+            if (HighLogic.LoadedScene == GameScenes.FLIGHT) return;
+            if (currentlyPainting != this) return;
 
-            if (menuOpen == false)
-                return;
+            if (menuOpen == false) return;
 
             // ID'd hashcode 'should' prevent control setting update issues? Hopefully?
             GUI.skin = HighLogic.Skin;
