@@ -111,7 +111,7 @@ namespace KerbPaint.Shaders
                     name = "KerbPaint/Emissive/Diffuse";
                     break;
                 case "EmissiveBumpSpec":
-                    name = "KerbPaint/Alpha/ Translucent";
+                    name = "KerbPaint/Bumped Specular";
                     break;
                 case "EmissiveSpec":
                     name = "KerbPaint/Emissive/Specular";

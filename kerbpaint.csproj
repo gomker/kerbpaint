@@ -99,7 +99,7 @@ copy /Y "$(TargetDir)$(Targetname).pdb" "%25KSP_DIR%25\GameData\%25ModName%25\Pl
 
 @echo Build/deploy complete!</PostBuildEvent>
   </PropertyGroup>
-    <Target Name="PostBuildMacros">
+  <Target Name="PostBuildMacros">
     <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
       <Output TaskParameter="Assemblies" ItemName="Targets" />
     </GetAssemblyIdentity>
@@ -113,5 +113,4 @@ copy /Y "$(TargetDir)$(Targetname).pdb" "%25KSP_DIR%25\GameData\%25ModName%25\Pl
     PostBuildMacros;
   </PostBuildEventDependsOn>
   </PropertyGroup>
-  
 </Project>
